@@ -1,10 +1,12 @@
 package fr.uga.l3miage.tp1.exo1.models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 @Table(name="car_porshe")
 public class CarEntity {
+    @Id
     @Column(name = "immat",length = 8)
     private String immatriculation;
     @Column(name = "cylinder_capacity")
@@ -17,4 +19,10 @@ public class CarEntity {
     private Integer power;
     @Column(name= "circulation_date")
     private LocalDate circulationDate;
+    @Column(name = "power_type")
+    @Enumerated(EnumType.ORDINAL)
+    private PowerType powerType;
+    @Column(name= "weight_unity")
+    @Enumerated(EnumType.STRING)
+    private WeightUnity weightUnity;
 }
