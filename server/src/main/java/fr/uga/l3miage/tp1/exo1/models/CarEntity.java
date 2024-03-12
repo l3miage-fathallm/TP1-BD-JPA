@@ -1,7 +1,12 @@
 package fr.uga.l3miage.tp1.exo1.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
+import javax.persistence.*;
+import java.time.LocalDate;
+import fr.uga.l3miage.tp1.exo1.enums.PowerType;
+import fr.uga.l3miage.tp1.exo1.enums.WeightUnity;
+
+
 
 @Entity
 @Table(name="car_porshe")
