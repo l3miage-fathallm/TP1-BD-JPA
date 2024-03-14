@@ -4,8 +4,7 @@ import javax.persistence.*;
 import java.math.BigInteger;
 import fr.uga.l3miage.tp1.exo2.models.NetflixUserEntity;
 
-@Entity
-@Table(name = "netflix_account")
+@Entity(name = "netflix_account")
 public class NetflixAccountEntity {
 @Id
     @Column(name = "id")

@@ -5,8 +5,7 @@ import java.math.BigInteger;
 import fr.uga.l3miage.tp1.exo2.enums.*;
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "netflix_user")
+@Entity(name = "netflix_user")
 public class NetflixUserEntity {
 @Id
 @Column(name = "id")
