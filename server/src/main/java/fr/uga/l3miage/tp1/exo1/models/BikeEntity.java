@@ -9,20 +9,15 @@ import java.time.LocalDate;
 @Table
 public class BikeEntity {
     @Id
-    @Column(name = "immatriculation")
     private String immatriculation;
-    @Column(name = "capacity")
     private Integer capacity;
     @Column(name= "cylinder_number")
     @Enumerated(EnumType.STRING)
     private CylinderNumber cylinderNumber;
-    @Column(name = "automatic")
     private boolean automatic;
-    @Column(name = "shifter")
     private boolean shifter;
     @Column(name = "shifter_type")
     @Enumerated(EnumType.ORDINAL)
     private ShifterType shifterType;
-    @Column(name = "circulation_date")
     private LocalDate circulationDate;
 }
