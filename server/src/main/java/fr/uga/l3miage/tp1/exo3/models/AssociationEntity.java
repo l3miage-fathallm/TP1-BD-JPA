@@ -1,4 +1,6 @@
-package fr.uga.l3miage.tp1.exo3;
+package fr.uga.l3miage.tp1.exo3.models;
+
+import fr.uga.l3miage.tp1.exo3.enums.AssociationType;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -7,14 +9,15 @@ import java.util.Set;
 public class AssociationEntity {
 @Id
     private String name;
-@Column(name = "president_name", nullable = false)
+@Column(nullable = false)
     private String presidentName;
-@Column(name = "treasurer_name", nullable = false)
+@Column(nullable = false)
     private String treasurerName;
 private String secretaryName;
 @Enumerated(EnumType.ORDINAL)
-    AssociationType associationType;
-@ManyToOne FederationEntity federation;
+AssociationType associationType;
+@ManyToOne
+FederationEntity federation;
 @OneToMany(mappedBy = "association")
     private Set<FederationEntity> federations;
 

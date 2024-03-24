@@ -1,4 +1,6 @@
-package fr.uga.l3miage.tp1.exo3;
+package fr.uga.l3miage.tp1.exo3.models;
+
+import fr.uga.l3miage.tp1.exo3.models.AssociationEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
