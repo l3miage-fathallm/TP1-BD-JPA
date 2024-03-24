@@ -4,18 +4,12 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table(name = "Session")
 public class SessionEntity {
 @Id
-    @Column(name = "id_session")
     private UUID idSession;
-@Column(name = "last_command")
-    private String lastCommand;
-@Column(name = "current_dir")
-    private String currentDir;
-@Column(name = "lock")
-    private boolean lock;
+private String lastCommand;
+private String currentDir;
+private boolean lock;
 @OneToOne
-    @JoinColumn(name = "id_user", referencedColumnName = "id_user")
     private UserEntity userEntity;
 }

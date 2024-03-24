@@ -1,7 +1,6 @@
 package fr.uga.l3miage.tp1.exo2.models;
 
 import javax.persistence.*;
-import java.math.BigInteger;
 import fr.uga.l3miage.tp1.exo2.enums.*;
 import java.time.LocalDate;
 
@@ -9,7 +8,7 @@ import java.time.LocalDate;
 public class NetflixUserEntity {
 @Id
 @Column(name = "id")
-private BigInteger id;
+private long id;
 @Column(name = "uuid")
 private String uuid;
 @Column(name = "last_name")
